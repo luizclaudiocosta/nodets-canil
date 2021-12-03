@@ -16,7 +16,7 @@ server.use(express.static(path.join(__dirname, '../public')))
 // Rotas
 server.use(mainRoutes)
 server.use((req, res)=>{
-    res.status(404).send('404 Página não encontrada')
+    res.status(404).render('pages/404')
 })
 
 server.listen(process.env.PORT)
